@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+		<style>
+			:root {
+				--background-color: #fff;
+				--text-color: #26325c;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				--background-color: #17212b;
+				--text-color: #fff;
+			}
+
+			@media (prefers-color-scheme: light) {
+				--background-color: #fff;
+				--text-color: #26325c;
+			}
+
+			body {
+				margin: 1rem;
+				font-family: monospace;
+				background-color: var(--background-color);
+				color: var(--text-color);
+				transition: 0.3s;
+			}
+
+			.qrcodes {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 1.6rem;
+				margin: 2rem 0;
+				padding: 0;
+				align-items: center;
+			}
+
+			.qrcode {
+				width: fit-content;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				align-items: center;
+				border: 1px solid #7992b3;
+				border-radius: 20px;
+				padding: 1rem;
+			}
+
+			.qrcode__img {
+				min-width: 300px;
+			}
+		</style>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
